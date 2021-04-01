@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InicioController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -8,4 +9,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/', 'welcome');
+
+Route::get('/inicio', [InicioController::class, 'index']);
