@@ -5,36 +5,17 @@
     <div id="slide" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       
       <ul>
-
+        @foreach($slide as $sli)
           <li>
-              <img src="images/slide/slide01.jpg">
+              <img src="storage/{{ $sli->imagen }}">
               <div class="slideCaption">
-                  <h3>Título 1</h3>
-                  <p>Descripción 1</p>
+                  <h3>{{ $sli->titulo }}</h3>
+                  <p>{{ $sli->descripcion }}</p>
               </div>
           </li>
-
-
-          <li>
-              <img src="images/slide/slide02.jpg">
-              <div class="slideCaption">
-                  <h3>Título 2</h3>
-                  <p>Descripción 2</p>
-              </div>
-          </li>
-
-
-          <li>
-              <img src="images/slide/slide03.jpg">
-              <div class="slideCaption">
-                  <h3>Título 3</h3>
-                  <p>Descripción 3</p>
-              </div>
-          </li>
+          @endforeach    
           
-     
-        
-      </ul>
+     </ul>
 
 
       <div id="slideIzq"><span class="fa fa-chevron-left"></span></div>
