@@ -9,13 +9,13 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto"> 
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+        <a class="nav-link" href="{{ url('/datos') }}" role="button">
           {{ auth()->user()->name }}
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" 
+        <a class="nav-link" 
         href="{{ route('logout') }}" onclick="event.preventDefault();
         document.getElementById('logout-form').submit();" role="button">
 

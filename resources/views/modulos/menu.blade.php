@@ -7,8 +7,7 @@
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
-     
+    <div class="sidebar">     
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -16,7 +15,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ url('/inicio') }}" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Inicio                
@@ -25,7 +24,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ url('/usuarios') }}" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Usuarios                
@@ -34,7 +33,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ url('/slide') }}" class="nav-link">
               <i class="nav-icon fas fa-image"></i>
               <p>
                 Slide                
@@ -43,7 +42,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ url('/categorias') }}" class="nav-link">
               <i class="nav-icon fas fa-list"></i>
               <p>
                 Categorias                
@@ -52,7 +51,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ url('/excurciones') }}" class="nav-link">
               <i class="nav-icon fas fa-bus"></i>
               <p>
                 Excurciones                
@@ -61,7 +60,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ url('/mensajes') }}" class="nav-link">
               <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Mensajes                
