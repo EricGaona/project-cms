@@ -6,6 +6,8 @@ use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\SlideController;
 use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\ExcursionesController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -31,6 +33,14 @@ Route::get('/categorias', [CategoriasController::class, 'index']);
 Route::post('/categorias', [CategoriasController::class, 'store']);
 Route::put('/categorias/{id}', [CategoriasController::class, 'update']);
 Route::delete('/ctg/{id}', [CategoriasController::class, 'destroy']);
+
+Route::get('/excursiones', [ExcursionesController::class, 'index']);
+Route::get('/crear-excursion', [ExcursionesController::class, 'create']);
+Route::post('/crear-excursion', [ExcursionesController::class, 'store']);
+Route::get('/excursion/{excursiones}/edit', [ExcursionesController::class, 'edit']);
+Route::put('/excursion/{excursiones}', [ExcursionesController::class, 'update'])->name('actualizar-excursion');
+Route::delete('/eliminar-excursion/{excursiones}', [ExcursionesController::class, 'destroy'])->name('eliminar-excursion');
+
 
 //  Front End
 Route::get('/', [FrontEndController::class, 'inicio']);
