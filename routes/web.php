@@ -5,7 +5,7 @@ use App\Http\Controllers\InicioController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\SlideController;
-
+use App\Http\Controllers\CategoriasController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,9 +22,15 @@ Route::get('/usuarios', [UsuariosController::class, 'index']);
 Route::get('/crear-usuarios', [UsuariosController::class, 'create']);
 Route::post('/crear-usuarios', [UsuariosController::class, 'store']);
 Route::delete('/usuarios/{id}', [UsuariosController::class, 'destroy']);
+
 Route::get('/slide', [SlideController::class, 'index']);
 Route::post('/slide', [SlideController::class, 'store']);
 Route::delete('/slide/{id}', [SlideController::class, 'destroy']);
+
+Route::get('/categorias', [CategoriasController::class, 'index']);
+Route::post('/categorias', [CategoriasController::class, 'store']);
+Route::put('/categorias/{id}', [CategoriasController::class, 'update']);
+Route::delete('/ctg/{id}', [CategoriasController::class, 'destroy']);
 
 //  Front End
 Route::get('/', [FrontEndController::class, 'inicio']);
