@@ -30,45 +30,16 @@
   
   <h1 class="text-center text-info"><b>CATEGORÍAS</b></h1>
 
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+    @foreach($categorias as $ctg)
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <a href="#" style="color: black;">             
+              <h3>{{ $ctg -> nombre}}</h3>
+            </a> 
+        </div>
 
-         <a href="#" style="color: black;">
-             
-              <h3>Viajes por Argentina</h3>
+    @endforeach
 
-         </a> 
-
-      </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
-
-         <a href="#" style="color: black;">
-             
-              <h3>Turismo en Colombia</h3>
-
-         </a> 
-
-      </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
-
-         <a href="#" style="color: black;">
-             
-              <h3>Brasil</h3>
-
-         </a> 
-
-      </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
-
-         <a href="#" style="color: black;">
-             
-              <h3>Perú</h3>
-
-         </a> 
-
-      </div>
+      
 
 </div>
 
