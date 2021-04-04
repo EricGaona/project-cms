@@ -20,7 +20,7 @@
 	<script src="http://localhost:8080/project-cms/public/js/jquery.fancybox.js"></script>
 	<script src="http://localhost:8080/project-cms/public/js/animatescroll.js"></script>
 	<script src="http://localhost:8080/project-cms/public/js/jquery.scrollUp.js"></script>
-
+    <script src="http://localhost:8080/project-cms/public/js/script.js"></script>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 
 
 
-{{-- <script src="js/script.js"></script> --}}
+
 
 </body>
 </html>

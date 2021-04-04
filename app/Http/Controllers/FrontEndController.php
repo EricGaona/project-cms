@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Categorias;
 use App\Models\Excursiones;
-use Illuminate\Http\Request;
 use App\Models\Slide;
+
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class FrontEndController extends Controller
@@ -17,16 +18,19 @@ class FrontEndController extends Controller
         return view('frontend.inicio')->with('slide', $slide)->with('categorias', $categorias)->with('excursiones', $excursiones);
     }
 
+
     public function excursiones(){
      
         $excursiones = Excursiones::all()->sortByDesc('id');
         return view('frontend.excursiones-todas')->with('excursiones', $excursiones);
     }
 
+
     public function excursion($id){
      
         $excursion = Excursiones::find($id);
-        return view('frontend.excursion')->with('excursion', $excursion);
+        $galerias = DB::select('select * from galeria where excursion_id = '.$id);
+        return view('frontend.excursion')->with('excursion', $excursion)->with('galerias', $galerias);
     }
 
 
@@ -34,7 +38,6 @@ class FrontEndController extends Controller
      
         $categoria = Categorias::find($id);
         $excursiones = DB::select('select * from excursiones where id_categoria = '.$id.' order by id desc');
-
 
         return view('frontend.excursiones')->with('categoria', $categoria)->with('excursiones', $excursiones);
     }

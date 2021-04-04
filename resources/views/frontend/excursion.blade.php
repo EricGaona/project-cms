@@ -24,39 +24,17 @@
             <hr>
 
             <ul>
+                @foreach($galerias as $img)
 
-                <li>
-                    <a rel="grupo" href="images/galeria/photo01.jpg">
-                    <img src="images/galeria/photo01.jpg">
+                 <li>
+                    <a rel="grupo" href="http://localhost:8080/project-cms/public/storage/{{ $img->imagen }}">
+                    <img src="http://localhost:8080/project-cms/public/storage/{{ $img->imagen }}">
                     </a>
-                </li>
+                </li>   
 
-                <li>
-                    <a rel="grupo" href="images/galeria/photo02.jpg">
-                    <img src="images/galeria/photo02.jpg">
-                    </a>
-                </li>
-
-                <li>
-                    <a rel="grupo" href="images/galeria/photo03.jpg">
-                    <img src="images/galeria/photo03.jpg">
-                    </a>
-                </li>
-
-
-                <li>
-                    <a rel="grupo" href="images/galeria/photo04.jpg">
-                    <img src="images/galeria/photo04.jpg">
-                    </a>
-                </li>
-
-
-                <li>
-                    <a rel="grupo" href="images/galeria/photo01.jpg">
-                    <img src="images/galeria/photo01.jpg">
-                    </a>
-                </li>
-
+                @endforeach
+                    
+                         
             </ul>
 
         </div>

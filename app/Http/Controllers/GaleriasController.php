@@ -32,40 +32,6 @@ class GaleriasController extends Controller
     }
 
 
-       public function show(Galerias $galerias)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Galerias  $galerias
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Galerias $galerias)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Galerias  $galerias
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Galerias $galerias)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Galerias  $galerias
-     * @return \Illuminate\Http\Response
-     */
     public function destroy( $id)
     {
        $galeria = Galerias::find($id);
