@@ -46,3 +46,6 @@ Route::delete('/eliminar-excursion/{excursiones}', [ExcursionesController::class
 Route::get('/', [FrontEndController::class, 'inicio']);
 Route::view('/datos', 'modulos.datos');
 Route::get('/', [FrontEndController::class, 'inicio']);
+Route::get('excursiones-todas', [FrontEndController::class, 'excursiones']);
+Route::get('excursion/{id}', [FrontEndController::class, 'excursion']);
+Route::get('excursiones/{id}', [FrontEndController::class, 'excursionesPorCategoria']);

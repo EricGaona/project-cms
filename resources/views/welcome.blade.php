@@ -9,17 +9,17 @@
 
 	<link rel="icon" href="#">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/cssFancybox/jquery.fancybox.css">
+	<link rel="stylesheet" href="http://localhost:8080/project-cms/public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://localhost:8080/project-cms/public/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://localhost:8080/project-cms/public/css/style.css">
+	<link rel="stylesheet" href="http://localhost:8080/project-cms/public/css/fonts.css">
+	<link rel="stylesheet" href="http://localhost:8080/project-cms/public/css/cssFancybox/jquery.fancybox.css">
 
-	<script src="js/jquery-2.2.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.fancybox.js"></script>
-	<script src="js/animatescroll.js"></script>
-	<script src="js/jquery.scrollUp.js"></script>
+	<script src="http://localhost:8080/project-cms/public/js/jquery-2.2.0.min.js"></script>
+	<script src="http://localhost:8080/project-cms/public/js/bootstrap.min.js"></script>
+	<script src="http://localhost:8080/project-cms/public/js/jquery.fancybox.js"></script>
+	<script src="http://localhost:8080/project-cms/public/js/animatescroll.js"></script>
+	<script src="http://localhost:8080/project-cms/public/js/jquery.scrollUp.js"></script>
 
 </head>
 
@@ -35,7 +35,7 @@
 
 
 
-<script src="js/script.js"></script>
+{{-- <script src="js/script.js"></script> --}}
 
 </body>
 </html>

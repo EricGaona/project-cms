@@ -22,10 +22,10 @@
                 
         <ul class="nav navbar-nav">
 
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#top">Categorias</a></li>
-            <li><a href="Excursiones-Todas">Excursiones</a></li>
-            <li><a href="#contactenos">Contáctenos</a></li>
+            <li><a href="{{ url('/') }}">Inicio</a></li>
+            <li><a href="{{ url('/#top') }}">Categorias</a></li>
+            <li><a href="{{ url('/excursiones-todas') }}">Excursiones</a></li>
+            <li><a href="{{ url('/#contactenos') }}">Contáctenos</a></li>
 
         </ul>
 
