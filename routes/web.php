@@ -7,6 +7,7 @@ use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\SlideController;
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\ExcursionesController;
+use App\Http\Controllers\GaleriasController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,6 +42,9 @@ Route::get('/excursion/{excursiones}/edit', [ExcursionesController::class, 'edit
 Route::put('/excursion/{excursiones}', [ExcursionesController::class, 'update'])->name('actualizar-excursion');
 Route::delete('/eliminar-excursion/{excursiones}', [ExcursionesController::class, 'destroy'])->name('eliminar-excursion');
 
+Route::get('galeria/{id}', [GaleriasController::class, 'create']);
+Route::post('galeria/{id}', [GaleriasController::class, 'store']);
+Route::delete('eliminar-img/{id}', [GaleriasController::class, 'destroy']);
 
 //  Front End
 Route::get('/', [FrontEndController::class, 'inicio']);

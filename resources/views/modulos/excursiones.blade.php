@@ -43,9 +43,14 @@
                               <td><img src="storage/{{ $excursion->portada }}" alt="foto" class="w-50"></td>
                               <td>{{ $excursion->descripcion }}</td>
                               <td>
+                                <a href="{{ url('galeria/'.$excursion->id) }}">
+                                  <button class="btn btn-primary"><i class="fa fa-image"></i></button>
+                                </a>
+
                                 <a href="{{ url('excursion/'.$excursion->id.'/edit') }}">
                                   <button class="btn btn-success"><i class="fa fa-pen"></i></button>
                                 </a>
+
                                 <form method="POST" action="{{ route('eliminar-excursion', ['excursiones' => $excursion->id]) }}">
                                   @csrf 
                                   @method('delete')
