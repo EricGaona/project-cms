@@ -126,6 +126,7 @@
           </ol>
 
           <form method="post" novalidate>
+                @csrf 
 
                   <input type="text" name="nombre" class="form-control"  placeholder="Nombre">
 

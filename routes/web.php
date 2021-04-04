@@ -8,6 +8,7 @@ use App\Http\Controllers\SlideController;
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\ExcursionesController;
 use App\Http\Controllers\GaleriasController;
+use App\Http\Controllers\MensajeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,6 +47,9 @@ Route::get('galeria/{id}', [GaleriasController::class, 'create']);
 Route::post('galeria/{id}', [GaleriasController::class, 'store']);
 Route::delete('eliminar-img/{id}', [GaleriasController::class, 'destroy']);
 
+Route::get('/mensajes', [MensajeController::class, 'index']);
+Route::get('/leer-mensaje/{id}', [MensajeController::class, 'show']);
+
 //  Front End
 Route::get('/', [FrontEndController::class, 'inicio']);
 Route::view('/datos', 'modulos.datos');
@@ -53,3 +57,4 @@ Route::get('/', [FrontEndController::class, 'inicio']);
 Route::get('excursiones-todas', [FrontEndController::class, 'excursiones']);
 Route::get('excursion/{id}', [FrontEndController::class, 'excursion']);
 Route::get('excursiones/{id}', [FrontEndController::class, 'excursionesPorCategoria']);
+Route::post('/', [FrontEndController::class, 'mensajes']);

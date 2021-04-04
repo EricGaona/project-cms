@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categorias;
 use App\Models\Excursiones;
 use App\Models\Slide;
+use App\Models\Mensaje;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -40,5 +41,21 @@ class FrontEndController extends Controller
         $excursiones = DB::select('select * from excursiones where id_categoria = '.$id.' order by id desc');
 
         return view('frontend.excursiones')->with('categoria', $categoria)->with('excursiones', $excursiones);
+    }
+
+    public function mensajes(Request $request){
+        $datos = request()->validate([
+            'nombre' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'max:255'],
+            'mensaje' => ['required', 'string'],
+        ]);
+
+        Mensaje::create([
+            'nombre' => $datos['nombre'],
+            'email' => $datos['email'],
+            'mensaje' => $datos['mensaje'],
+            'leido' => 'no',
+        ]);
+            return redirect('/');
     }
 }
