@@ -19,6 +19,9 @@ Auth::routes();
 Route::view('/', 'welcome');
 
 Route::get('/inicio', [InicioController::class, 'index']);
+Route::post('/inicio', [InicioController::class, 'logo']);
+Route::post('/inicio', [InicioController::class, 'datosGenerales']);
+
 Route::put('/datos', [UsuariosController::class, 'update']);
 Route::get('/usuarios', [UsuariosController::class, 'index']);
 //Route::view('/crear-usuarios', 'modulos.crear-usuarios');

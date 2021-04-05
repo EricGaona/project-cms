@@ -10,7 +10,14 @@ use Illuminate\Support\Facades\Storage;
 
 class SlideController extends Controller
 {
-  
+    public function __construct()
+    {
+
+        $this->middleware('auth');
+
+    }
+
+    
     public function index()
     {
         $slide = DB::select('select * from slide');

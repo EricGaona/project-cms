@@ -8,8 +8,20 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 class UsuariosController extends Controller
 { 
+    public function __construct()
+    {
+
+        $this->middleware('auth');
+
+    }
+
+
     public function index()
     {
+        if(auth()->user()->rol != 'Administrador'){
+            return redirect('inicio');
+        }
+
 // $usuarios =DB::select('select * from users');
 // LA LINEA DE ABAJO ES OTRA FORMA DE HACER LO DE ARRIBA AÑADIENDO ESTO (use App\Models\User;) EN LA CABECERA
         $usuarios = User::all();

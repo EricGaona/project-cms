@@ -2,7 +2,7 @@
     
     <div id="logo" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             
-        <img src="#" class="img-responsive">
+        <img src="http://localhost:8080/project-cms/public/storage/{{$inicio->logo}}" class="img-responsive">
 
     </div>
 
