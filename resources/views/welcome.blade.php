@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{$inicio->nombre}}</title>
+	{{-- <title>Soy Laravel</title> --}}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,7 +21,7 @@
 	<script src="http://localhost:8080/project-cms/public/js/jquery.fancybox.js"></script>
 	<script src="http://localhost:8080/project-cms/public/js/animatescroll.js"></script>
 	<script src="http://localhost:8080/project-cms/public/js/jquery.scrollUp.js"></script>
-    {{-- <script src="http://localhost:8080/project-cms/public/js/script.js"></script> --}}
+    <script src="http://localhost:8080/project-cms/public/js/script.js"></script>
 	
 </head>
 
